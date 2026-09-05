@@ -21,7 +21,7 @@ Powered by Google's **Interactions API** (`antigravity-preview-05-2026`) featuri
 
 Powered by the official Google Gemini REST API.
 
-- **Primary Models**: `gemini-3.7-flash`, `gemini-3.5-flash`
+- **Primary Models**: `gemini-3.8-flash`, `gemini-3.7-flash`, `gemini-3.6-flash`, `gemini-3.5-flash`, `gemma-4-31b-it`
 - **Setup**:
   ```bash
   export GEMINI_API_KEY="your-gemini-key"

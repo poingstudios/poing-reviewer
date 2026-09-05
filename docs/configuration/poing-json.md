@@ -13,7 +13,7 @@ You can customize Poing AI behavior across your repository using an optional `.g
   "review": {
     "provider": "gemini",
     "model": "gemini-2.5-flash",
-    "fallback_models": ["gemini-3.7-flash", "gemini-3.5-flash"],
+    "fallback_models": ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash"],
     "max_chars": 100000,
     "max_batches": 10,
     "rag": {

@@ -21,6 +21,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 
 FALLBACK_MODELS = [
+    "gemini-3.8-flash",
     "gemini-3.7-flash",
     "gemini-3.6-flash",
     "gemini-3.5-flash",
@@ -307,7 +308,7 @@ class Config:
         elif self.PROVIDER == "deepseek":
             default_model = configured_model if configured_provider == "deepseek" else "deepseek-chat"
         else:
-            default_model = configured_model or "gemini-3.7-flash"
+            default_model = configured_model or "gemini-3.8-flash"
 
         self.PRIMARY_MODEL = model_name or get_env_optional("MODEL_NAME") or default_model
         fallback_str = ",".join(section_cfg.get("fallback_models", [])) if (configured_provider == self.PROVIDER or self.PROVIDER == "gemini") else ""
