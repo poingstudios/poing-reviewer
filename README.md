@@ -207,7 +207,7 @@ Customize behavior per repository with a `.github/poing.json` file:
 {
   "provider": "gemini",
   "review": {
-    "model": "gemini-3.7-flash",
+    "model": "gemini-3.8-flash",
     "strict_ground_truth": true,
     "rag": {
       "provider": "local",

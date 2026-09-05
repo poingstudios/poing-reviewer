@@ -24,6 +24,7 @@ class TestConfig(unittest.TestCase):
         self.assertEqual(models[0], "custom-model")
         self.assertIn("fallback-1", models)
         self.assertIn("fallback-2", models)
+        self.assertIn("gemini-3.8-flash", models)
         self.assertIn("gemini-3.5-flash", models)
 
     def test_config_initialization(self):
@@ -40,6 +41,14 @@ class TestConfig(unittest.TestCase):
         self.assertEqual(cfg.repo_name, "test-repo")
         self.assertEqual(cfg.ISSUE_NUMBER, "123")
         self.assertTrue(cfg.LOCAL)
+
+        # Default review mode model with poing.json
+        review_cfg = Config(mode="review", gemini_api_key="test_key")
+        self.assertEqual(review_cfg.PRIMARY_MODEL, "gemini-3.8-flash")
+
+        # Default model without config file
+        empty_cfg = Config(mode="review", gemini_api_key="test_key", config_data={})
+        self.assertEqual(empty_cfg.PRIMARY_MODEL, "gemini-3.8-flash")
 
 
 if __name__ == "__main__":

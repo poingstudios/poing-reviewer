@@ -57,6 +57,11 @@ class TestGeminiProvider(unittest.TestCase):
             self.assertEqual(result.priority, TriagePriority.HIGH)
             self.assertFalse(result.is_duplicate)
 
+    def test_gemini_provider_default_models(self):
+        provider = GeminiProvider(api_key="mock_key")
+        self.assertEqual(provider.models_to_try[0], "gemini-3.8-flash")
+        self.assertIn("gemini-3.7-flash", provider.models_to_try)
+
 
 if __name__ == "__main__":
     unittest.main()

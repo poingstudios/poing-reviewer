@@ -80,7 +80,7 @@ def create_parser() -> argparse.ArgumentParser:
         "-m",
         "--model",
         default=None,
-        help="Primary AI model name (e.g. gemini-3.7-flash, deepseek-r1:latest, gpt-4o-mini)",
+        help="Primary AI model name (e.g. gemini-3.8-flash, gemini-3.7-flash, deepseek-r1:latest, gpt-4o-mini)",
     )
     parser.add_argument(
         "--api-base",

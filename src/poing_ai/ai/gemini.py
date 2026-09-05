@@ -144,10 +144,12 @@ class GeminiProvider(BaseAIProvider):
     def __init__(self, api_key: str, models_to_try: Optional[List[str]] = None):
         self.api_key = api_key
         self.models_to_try = models_to_try or [
-            "gemini-2.5-flash",
+            "gemini-3.8-flash",
             "gemini-3.7-flash",
+            "gemini-3.6-flash",
             "gemini-3.5-flash",
             "gemini-3.5-flash-lite",
+            "gemini-2.5-flash",
             "gemma-4-31b-it",
         ]
         self.last_used_model = self.models_to_try[0] if self.models_to_try else "gemini-3.7-flash"
